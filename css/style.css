@@ -1,0 +1,726 @@
+@charset "UTF-8";
+* {
+  font-family: Roboto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto;
+  font-weight: bolder;
+}
+
+html h1 {
+  font-size: 1.6em;
+}
+
+html p {
+  font-family: Roboto;
+}
+
+/* ********** Header ( Logo ) ********** */
+.logo-center {
+  text-align: center;
+}
+.logo-center .ohmyfood {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+}
+
+/* ********** Loading spinner ********** */
+.loader {
+  border: 16px solid #e6e6e6;
+  border-top: 16px solid #9356DC;
+  border-bottom: 16px solid #99E2D0;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  z-index: 1000;
+  animation: spin 3s linear;
+  opacity: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+.loader-2 {
+  width: 0%;
+  height: 0%;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: white;
+  animation: pageloader 3s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes pageloader {
+  0% {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+  50% {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  99% {
+    height: 100%;
+    width: 100%;
+  }
+  100% {
+    opacity: 0;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+  }
+}
+/* ********** 1ère Section ( CTA ) ********** */
+.bloc-head1 {
+  background-color: #e6e6e6;
+  border-top: 4px solid gainsboro;
+}
+.bloc-head1 p {
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 25px;
+}
+.bloc-head1 p .fa-map-marker-alt {
+  padding-right: 10px;
+}
+
+.bloc-head {
+  background-color: whitesmoke;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.bloc-head h1 {
+  margin-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.btn {
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  color: white;
+  border: 1px solid #FF79DA;
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+  box-shadow: 8px 8px 15px gray;
+}
+
+/* ********** 2ème Section ( Fonctionnement ) ********** */
+.fct h1 {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.fct {
+  padding-bottom: 30px;
+}
+.fct ol {
+  list-style: none;
+  padding: 0px;
+}
+.fct ol li {
+  text-align: center;
+  font-weight: bold;
+}
+
+.border-li {
+  border: 1px solid whitesmoke;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: whitesmoke;
+  opacity: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 5px 5px 6px #e6e6e6;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.border-li:hover {
+  background-color: #d7c0f2;
+}
+.border-li:hover .fas {
+  color: #9356DC;
+}
+
+.btn-number {
+  border: 1px solid #9356DC;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px;
+  font-size: small;
+  position: absolute;
+  z-index: 1;
+  top: 15px;
+  left: -10px;
+}
+
+.fa-list-ul {
+  padding-left: 20px;
+  padding-right: 21px;
+}
+
+.fa-mobile-alt {
+  padding-left: 20px;
+  padding-right: 24px;
+}
+
+.fa-store {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ********** 3ème Section ( Restaurants ) ********** */
+.bloc-restau {
+  background-color: whitesmoke;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+.bloc-restau a {
+  text-decoration: none;
+  color: black;
+}
+.bloc-restau h1 {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 5px #e6e6e6;
+  position: relative;
+}
+.card h2 {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.card p {
+  margin-top: 5px;
+}
+.card .fa-heart {
+  bottom: 25px;
+}
+
+.photo {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.new {
+  width: 80px;
+  height: auto;
+  background-color: #99E2D0;
+  color: green;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  top: 10px;
+}
+
+.new2 {
+  width: 80px;
+  height: auto;
+  background-color: #99E2D0;
+  color: green;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  top: 10px;
+}
+
+/* ********** FOOTER ********** */
+footer {
+  background-color: #282828;
+  color: #f0f0f0;
+}
+footer ul {
+  list-style: none;
+  padding-bottom: 30px;
+}
+footer ul li {
+  margin-bottom: 5px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+footer h1,
+ul {
+  margin: 0px;
+  padding-top: 25px;
+  padding-left: 20px;
+}
+
+footer h1 {
+  font-size: medium;
+  font-family: Shrikhand;
+}
+
+.fa-utensils {
+  padding-right: 10px;
+}
+
+.fa-hands-helping {
+  padding-right: 10px;
+  font-size: x-small;
+}
+
+/* *********** Pages menu ********** */
+/* ********** Animation coeur ********** */
+.fa-heart {
+  position: absolute;
+  right: 8%;
+  cursor: pointer;
+}
+
+.background-menu .fa-heart {
+  top: 35px;
+}
+
+.fa-heart.fas {
+  opacity: 0;
+}
+
+.fa-heart.far {
+  opacity: 1;
+}
+
+.coeur:hover {
+  opacity: 0;
+}
+
+.fa-heart.far:active {
+  opacity: 0;
+}
+
+.fa-heart.fas:active {
+  opacity: 1;
+  background: linear-gradient(190deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.75s linear;
+}
+
+.fa-heart.far:hover {
+  opacity: 0;
+}
+
+.fa-heart.fas:hover {
+  opacity: 1;
+  background: linear-gradient(190deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.75s linear;
+}
+
+/* ****************** Fin Anim coeur *************** */
+body {
+  background-color: white;
+}
+
+.flex-row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+}
+
+.arrow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.logo-center2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.menu-pic {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.background-menu {
+  background-color: whitesmoke;
+  border-radius: 25px 25px 0px 0px;
+  padding: 15px;
+  position: relative;
+  margin-top: -50px;
+}
+.background-menu h1 {
+  margin: 0px;
+  font-family: Shrikhand;
+  padding-top: 10px;
+}
+.background-menu h2 {
+  font-weight: normal;
+  font-size: large;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding-bottom: 5px;
+  padding-top: 20px;
+}
+
+.bloc-plat {
+  width: 340px;
+  border: 1px solid whitesmoke;
+  border-radius: 15px;
+  background-color: white;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 4px #e6e6e6;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.bloc-plat p {
+  margin: 0px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: large;
+  padding-bottom: 5px;
+}
+
+.bold2 {
+  font-weight: bold;
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.text-center {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.flex-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.btn-2 {
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  color: white;
+  border: 1px solid #FF79DA;
+  border-radius: 25px;
+  box-shadow: 5px 5px 15px gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 15px;
+}
+
+.btn-2:hover {
+  filter: brightness(1.2);
+  box-shadow: 8px 8px 15px gray;
+}
+
+/* *************** Animation Apparition plats ***************** */
+.anim_plat {
+  opacity: 1;
+  animation: slideup 1s ease both;
+}
+
+.anim_plat2 {
+  opacity: 1;
+  animation: slideup 2s ease both;
+}
+
+.anim_plat3 {
+  opacity: 1;
+  animation: slideup 3s ease both;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* *************** Animation Card check ( bouton vert ) ****************** */
+.flex1 {
+  flex: 1;
+  padding: 10px 0px 10px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card_check {
+  background-color: #99E2D0;
+  width: 60px;
+  border-radius: 0px 15px 15px 0px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -60px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.card_check i {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.bloc-plat:hover .card_check {
+  margin-right: 0px;
+}
+.bloc-plat:hover .card_check .fa-check-circle {
+  transform: rotate(0deg);
+}
+
+/* ********** Tablettes résolution ********** */
+@media only screen and (min-width: 768px) {
+  /* ********** Page Acceuil ********** */
+  .btn-number {
+    left: -1.5%;
+  }
+
+  .card {
+    width: 40%;
+  }
+
+  .flex-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+
+  .padding_bottom_tab {
+    padding-bottom: 10px;
+  }
+
+  .new {
+    top: 10px;
+    right: 15px;
+  }
+
+  .new2 {
+    top: 10px;
+    right: 15px;
+  }
+
+  /* ********** Page Menu ********** */
+  .background-menu {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  .background-menu h2 {
+    margin-left: 5%;
+  }
+
+  .color-3 {
+    background-color: #99E2D0;
+  }
+
+  .color-white {
+    background-color: white;
+  }
+
+  .bloc-plat {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+  }
+}
+/* *********** Ordinateur version *********** */
+@media only screen and (min-width: 1224px) {
+  /* *********** Page Acceuil ********** */
+  .border-li {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    width: 20%;
+  }
+
+  .fct {
+    padding-bottom: 10px;
+  }
+  .fct h1 {
+    padding-top: 10px;
+  }
+
+  .bloc-restau h1 {
+    padding-top: 20px;
+  }
+
+  .new {
+    top: 10px;
+    right: 15px;
+  }
+
+  .new2 {
+    top: 10px;
+    right: 15px;
+  }
+
+  /* *********** Pages Menu *********** */
+  .background-menu {
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  .background-menu h1 {
+    margin-left: 5%;
+  }
+  .background-menu h2 {
+    margin-left: 10%;
+  }
+
+  .menu-pic {
+    height: 400px;
+  }
+
+  .bloc-plat {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
