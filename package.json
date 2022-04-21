@@ -1,0 +1,19 @@
+{
+    "name": "premierprojet",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Dev-Bapt/BaptisteChoulant_3_27012022.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Dev-Bapt/BaptisteChoulant_3_27012022/issues"
+    },
+    "homepage": "https://github.com/Dev-Bapt/BaptisteChoulant_3_27012022#readme"
+}
